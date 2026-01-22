@@ -1,0 +1,150 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.5rem; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222;
+  background-color: black;
+  background: rgba(202, 202, 163, 0.445);
+  color: #06888a;
+}
+
+.header {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.banner {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: rgba(126, 119, 119, 0.8);
+}
+
+.banner a {
+  text-decoration: none;
+  display: inline-block;
+  color: black;
+  background-color: #d8c368;
+  border: 1px solid #3d4227;
+  transition-property: color, background-color, border-color;
+  transition-duration: 1s, 1s, 0.5s;
+  transition-delay: 0, 0, 1s;
+}
+
+.banner a:hover {
+  background-color: #e6d010;
+  transform: scale(1.2);
+}
+
+section p {
+  color: rgb(143, 110, 28);
+  font-family: "Arial Black", Arial, Helvetica, sans-serif;
+  font-size: 2em;
+}
+
+.descibe_section {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  background-color: #34ccb3;
+  font-size: large;
+  color: brown;
+}
+
+.CashCheck {
+  width: 70vw;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 10px 10px 0 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.CashCheck ul {
+  display: block;
+  padding-bottom: 5px;
+}
+
+.work h2 {
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  background-color: #e1edeb;
+}
+.work section {
+  color: rgb(59, 56, 48);
+  background-image: linear-gradient(to right, rgb(100, 230, 176), rgb(81, 194, 128));
+  padding-left: 8px;
+}
+
+strong {
+  color: brown;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  background-color: #e1edeb;
+}
+
+strong.question {
+  display: inline-block;
+  background-color: #d8c368;
+  animation: fadeIn ease-in-out 3s 2 alternate forwards;
+  animation: growAndGlow 2s linear 1s infinite;
+  animation-play-state: running;
+}
+
+strong.question:hover {
+  cursor: pointer;
+}
+
+li {
+  padding: 5px;
+  /*
+  background-color: #ffeed5;
+  list-style-type: none;*/
+}
+
+.addition_info {
+  margin: 8px 8px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(to right, rgb(133, 224, 106), rgb(133, 238, 125));
+  color: rgb(221, 25, 133);
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes growAndGlow {
+  from {
+    transform: scale(0.8);
+    background-color: rgb(191, 233, 172);
+    animation-timing-function: cubic-bezier(1, 0.03, 1, 0.115);
+  }
+  50% {
+    transform: scale(1);
+    background-color: rgb(120, 216, 76);
+    animation-timing-function: linear;
+  }
+  to {
+    transform: scale(1.2);
+    background-color: rgb(59, 148, 18);
+  }
+}

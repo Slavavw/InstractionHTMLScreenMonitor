@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>    
+  <link rel="stylesheet" href="./style.css">
+  <script src="./modalWnd.js"></script>    
+  <link rel="stylesheet" href="./modalWnd.css">
+  <title>Интеграция IkassaSmartX с Gedemin</title>    
+</head>
+<body>
+  <div class="header">  
+    <nav class="banner">    
+    <a href="./secondDisplay.html">Настройка второго монитора, подключенного к одной и той же кассе</a>
+    <a href="./enatherDisplay.html">Настройка прочих мониторов</a>
+  </nav>
+  <h1>Интеграция HTML WEB-Monitor  (монитор покупателя)</h1>
+  <section>       
+    <figure>
+      <img src="./images/Презентация.jpg"  width="98%" height="90%">
+    </figure>      
+  </section>  
+  </div>  
+  <footer class="addition_info" >
+    <ul>Монитором покупателя может выступать:
+      <li>Монитор, в качестве второго экрана компьютера, на котором работает касса</li>
+      <li>Планшет, смарт телевизор, который имеет сетевую карту и в операционной системе установлен любой браузер (Google, Microsoft Edge, Internet Explorer, FireFox)</li>
+    </ul>
+  </footer>
+  <footer class="addition_info" >
+    Перед использованием HTML WEB-Monitor Устанавливаем на компьютер программу Node <strong>node-v22.14.0-x64</strong><br>    
+  </footer>
+  <article class="CashCheck">
+    <ul>Есть два варианта установки комплекса
+      <li> Если компьютер имеет доступ к сети интернет и установлен на компьютере git Bush, то комплекс может быть скачен из gitHub с последующей установкой пакетов библиотек</li>
+      <li>Если компьютер не подключен к сети интернет, тогда комплекс <strong>  HTMLScreen_Cash.rar   </strong>   распаковывается из архива с пакетами бибилиотек. <br>
+        Место куда распаковали комплекс, можно переносить в любую папку, главное потом в настройках Гедымин указать эту папку.
+      </li>
+    </ul>
+  </article>  
+  <article class="CashCheck">Устанавливаем на кассу ПИ <strong>GS.PositiveCash.06Настройки_HTMLScreen</strong> 
+    <strong class="question" my_special_attribute = "type1">📌</strong>
+  </article>
+  <article class="CashCheck">
+    После установки ПИ в Гедымин в дереве Исследоваителя выбираем <strong>04. Установить Монитор покупателя через WEB</strong>
+    <strong class="question" my_special_attribute = "type2">📌</strong>
+  </article>
+  <article class="CashCheck">
+    Открывается окно настройки. <br>
+    Настройка производится впервый раз, а также каждый раз, когда вы захотите изменить параметры такие как:<br>
+    <ul>
+      <li>Порт, на котором будет работать программа</li>
+      <li>Интервал обновления данных, между Гедымин и монитором</li>
+      <li>Фон монитора покупателя</li>
+      <li>Настройка видимости колонок, которые будут отображаться на экране монитора</li>    
+    </ul>
+    <figure>
+      <img src="./images/ОкноНастройки Монитора1.JPG"  width="70%" height="90%">
+    </figure><br>
+    <br>
+    При начальной установке, если есть подключение к Интернет и установлен git Bush, то комплекс можно загрузить из Git,<br> 
+     установив флажок в позиции <strong>Загрузить модуль HTMLScreen из GitHub</strong> <br>
+     при этом, если не будет указана папка в которую установить из GitHub комплекс,<br>
+     то комплекс будет установлен по умолчанию в папке, где находится программа Гедымин.<br><br>
+     Если устанавливаете комплекс из архива, тогда необходимо указать путь к папке куда вы распокавали комплекс.<strong class="question" my_special_attribute = "typeSetFolder">📌</strong><br>
+     Можно установить фон окна монитора, который будет отображаться, выбрав нужный файл (jpeg, jpg, bmp и т.д.)<br>
+     Настройка видимости отображения колонок позволяет выбрать колонки, которые будут отображаться на мониторе покупателя.<strong class="question" my_special_attribute = "typeSetColumn">📌</strong><br>
+  </article>  
+  <br>  
+  <article class="CashCheck">
+    При установке в Гедымине в Параметрах Настройки будет установлен флажок "Суммировать одинаковые позиции в чеке"<br>
+    Он должен быть установлен, т.к. монитор покупателя не будет отслеживать одинаковые позиции в чеке.<br>
+    <img src="./images/Параметры1.JPG"  width="70%" height="90%">
+  </article>
+  <article class="CashCheck">
+    Запускаем АРМ кассира первый раз, затем закрываем окно кассира и второй раз запускаем АРМ кассира.<br>
+    После второго запуска АРМ кассира стартует Browser. <br>
+    В окне настройки нужно выбрать браузер, который будет использоваться в качестве монитора покупателяю.<br>
+    <figure>
+      <img src="./images/ОкноНастройки Монитора3.JPG"  width="70%" height="90%">
+    </figure><br>
+    
+  </article>
+  <article class="CashCheck">
+    При выборе товара/изменнии количества на мониторе будет отображаться данные чека. <strong class="question" my_special_attribute = "type4">📌</strong></li><br>
+  </article>  
+  <article class="CashCheck">
+    Можно добавить для отображения в чеке покупателя изображения товара<br>
+    Для этого необохдимо зайти в прайс, выбрать товар, войти в окно редактирования Номенклатуры ТМЦ и на закладке Изображение товара выбрать изображение товара (картинку).<strong class="question" my_special_attribute = "type6">📌</strong></li>
+  </article>
+  <footer class="addition_info" >
+    Каждый раз при запуске АРМ кассира запускается в фоновом режиме процесс старта Монитора.<br>
+    Поэтому при постоянном перезапуске окна кассира может висеть много окон, их можно закрыть принудительно или ничего не делать, при выключении, перезагрузки ПК процессы закроются.
+    <figure><img src="./images/процесс.JPG"  width="70%" height="90%"></figure>
+  </footer>  
+</body>
+<script>
+  $(function(){
+    $(".question").on('click',(event)=>{
+      let content, modalWindow = new ModalWindow('w1', window.innerWidth*0.7 , window.innerHeight*0.95 );
+      modalWindow.showWin();
+      switch($(event.target).attr("my_special_attribute")){
+      case "typeSetFolder":
+        content = 
+            `<footer class="addition_info">Выбор папки, куда установлен комплекс
+              <figure><img src="./images/ОкноНастройки Монитора2.JPG" alt="синхронизируем ПИ в Гедымин" width="98%" height="90%"></figure>
+            </footer>`
+        break;      
+      case "typeSetColumn":
+        content = 
+            `<footer class="addition_info">По функциональной клавише <strong>F10</strong> входим в режим редактирования таблицы <br>
+              и выбираем колонки, которые должны отображаться или скрыты на мониторе покупателя.
+              <figure><img src="./images/ОкноНастройки Монитора3.JPG" alt="синхронизируем ПИ в Гедымин" width="98%" height="90%"></figure>
+            </footer>`
+        break;      
+        case "type1":
+          content = 
+            `<footer class="addition_info">Установка ПИ
+              <figure><img src="./images/RetailSynchrCash1.JPG" alt="синхронизируем ПИ в Гедымин" width="98%" height="90%"></figure>
+            </footer>`
+            break;        
+        case "type2":
+          content = 
+              `<footer class="addition_info">
+                  <figure><img src="./images/ПунктИсследователя.JPG"  width="50%" height="50%"></figure>
+              </footer>`;
+            break;        
+        case "type4":
+          content = 
+              `<footer class="addition_info">
+                  <figure><img src="./images/ИнициализацияВеб1.JPG"  width="100%" height="80%"></figure>
+              </footer>`;
+            break;                    
+        case "type6":
+          content = 
+           `<footer class="addition_info">
+            <figure><img src="./images/товар.JPG"  width="90%" height="90%"></figure>
+           </footer>
+           <article class="CashCheck">
+            В результате в чеке будет отображаться изображение товара<br>
+            <footer class="addition_info">
+            <figure><img src="./images/товар1.JPG"  width="90%" height="90%"></figure>
+           </footer>
+            </article>`;
+            break;                
+          }
+      modalWindow.content.append( $(content) );      
+    })
+  })
+</script>
+</html>

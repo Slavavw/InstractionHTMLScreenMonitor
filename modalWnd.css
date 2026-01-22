@@ -1,0 +1,49 @@
+.mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #000;
+  display: none;
+}
+
+.window {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 0px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.top {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  height: 20px;
+  background-color: gray;
+  cursor: move;
+}
+
+.close {
+  float: right;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 2px 1px 3px #999999;
+}
+.close:hover {
+  color: #b61919;
+  text-decoration: underline;
+  box-shadow: -4px -4px 3px 5px #cfcdcd, 2px 2px 5px rgb(27, 26, 26);
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.content {
+  flex-grow: 1;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  overflow: scroll;
+}
